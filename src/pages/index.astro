@@ -13,40 +13,40 @@ const year = new Date().getFullYear();
 
   <main id="top">
   <Motion />
-    <!-- Hero: centered statement + market snapshot -->
+    <!-- Hero: statement + live market snapshot -->
     <section class="border-b border-line bg-white">
-      <div class="mx-auto max-w-3xl px-6 pt-16 pb-10 text-center md:pt-20">
-        <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">
-          Investment advisory · Kathmandu · Est. in Nepal
-        </p>
-        <h1 class="mt-3 font-serif text-[38px] leading-[1.12] font-semibold tracking-tight text-ink md:text-[52px]">
-          {company.hero.heading}
-        </h1>
-        <p class="mt-5 text-[17px] leading-relaxed text-muted">{company.hero.sub}</p>
-        <div class="mt-7 flex flex-wrap justify-center gap-4">
-          <a href="#contact" class="bg-navy px-6 py-3 text-sm font-medium text-white transition hover:bg-navy-dark">
-            Speak with an advisor
-          </a>
-          <a href="#market" class="border border-line px-6 py-3 text-sm font-medium text-ink transition hover:border-navy hover:text-navy">
-            Read the market brief
-          </a>
+      <div class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:py-20 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+        <div>
+          <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">
+            Investment advisory · Kathmandu · Est. in Nepal
+          </p>
+          <h1 class="mt-3 max-w-xl font-serif text-[38px] leading-[1.12] font-semibold tracking-tight text-ink md:text-[52px]">
+            {company.hero.heading}
+          </h1>
+          <p class="mt-5 max-w-lg text-[17px] leading-relaxed text-muted">{company.hero.sub}</p>
+          <div class="mt-7 flex flex-wrap gap-4">
+            <a href="#contact" class="bg-navy px-6 py-3 text-sm font-medium text-white transition hover:bg-navy-dark">
+              Speak with an advisor
+            </a>
+            <a href="#market" class="border border-line px-6 py-3 text-sm font-medium text-ink transition hover:border-navy hover:text-navy">
+              Read the market brief
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="mx-auto max-w-6xl px-6 pb-16">
         <aside class="reveal border border-line bg-panel">
           <div class="flex items-center justify-between border-b border-line px-5 py-3">
             <span class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">NEPSE at a glance</span>
             <span class="text-[11px] text-muted">mid-2026</span>
           </div>
-          <dl class="grid grid-cols-2 gap-px bg-line sm:grid-cols-3 lg:grid-cols-5">
+          <dl class="divide-y divide-line px-5">
             {company.snapshot.map((row) => (
-              <div class="bg-panel px-4 py-5 text-center">
-                <dt class="text-[11px] uppercase tracking-wide text-muted">{row.label}</dt>
-                <dd class="mt-1.5 text-[14px] font-semibold tabular-nums text-ink">{row.value}</dd>
+              <div class="flex items-baseline justify-between gap-4 py-2.5">
+                <dt class="text-[13px] text-muted">{row.label}</dt>
+                <dd class="text-right text-[13px] font-semibold tabular-nums text-ink">{row.value}</dd>
               </div>
             ))}
           </dl>
-          <p class="border-t border-line px-5 py-2.5 text-center text-[11px] text-muted">
+          <p class="border-t border-line px-5 py-2.5 text-[11px] text-muted">
             Indicative published figures. Refer to SEBON and NEPSE for current data.
           </p>
         </aside>
@@ -104,7 +104,7 @@ const year = new Date().getFullYear();
 
       <div class="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
         {company.market.analysis.map((a) => (
-          <div class="reveal border-t-2 border-navy pt-4">
+          <div class="reveal border-l-2 border-navy pl-4">
             <h4 class="text-[13px] font-semibold text-navy uppercase">{a.title}</h4>
             <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted">{a.body}</p>
           </div>
@@ -113,7 +113,7 @@ const year = new Date().getFullYear();
 
       <h3 class="mt-12 font-serif text-lg font-semibold text-ink">Sector weightings</h3>
       <div class="mt-4 overflow-x-auto border border-line bg-white">
-        <table class="mx-auto w-full max-w-4xl min-w-[680px] border-collapse text-left text-[13px]">
+        <table class="w-full min-w-[680px] border-collapse text-left text-[13px]">
           <thead>
             <tr class="border-b border-line bg-panel">
               <th class="px-4 py-2.5 text-[11px] font-semibold tracking-[0.14em] text-navy uppercase">Sector</th>
@@ -155,7 +155,7 @@ const year = new Date().getFullYear();
           </div>
         ))}
       </dl>
-      <p class="mx-auto mt-10 max-w-3xl border-t-2 border-navy pt-5 text-[15px] leading-relaxed text-ink">
+      <p class="mt-8 border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
         {company.shareMarket.closing}
       </p>
     </Section>
@@ -171,7 +171,7 @@ const year = new Date().getFullYear();
           </div>
         ))}
       </dl>
-      <p class="mx-auto mt-10 max-w-3xl border-t-2 border-navy pt-5 text-[15px] leading-relaxed text-ink">
+      <p class="mt-8 border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
         {company.opportunities.closing}
       </p>
     </Section>
@@ -181,14 +181,16 @@ const year = new Date().getFullYear();
       <p class="text-[15px] leading-relaxed text-ink/85">{company.fdi.intro}</p>
       <ol class="mt-8 grid gap-x-10 md:grid-cols-2">
         {company.fdi.highlights.map((h, i) => (
-          <li class="border-t border-line py-5">
-            <p class="font-serif text-[13px] text-muted tabular-nums">{String(i + 1).padStart(2, '0')}</p>
-            <p class="mt-1 text-[14px] font-semibold text-ink">{h.title}</p>
-            <p class="mt-1 text-[14px] leading-relaxed text-muted">{h.body}</p>
+          <li class="grid grid-cols-[28px_1fr] gap-2 border-t border-line py-3.5">
+            <span class="font-serif text-[13px] text-muted tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <p class="text-[14px] font-semibold text-ink">{h.title}</p>
+              <p class="mt-0.5 text-[14px] leading-relaxed text-muted">{h.body}</p>
+            </div>
           </li>
         ))}
       </ol>
-      <p class="mx-auto mt-10 max-w-3xl border-t-2 border-navy pt-5 text-[15px] leading-relaxed text-ink">
+      <p class="mt-8 border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
         {company.fdi.closing}
       </p>
     </Section>
@@ -198,7 +200,7 @@ const year = new Date().getFullYear();
       <p class="reveal text-[15px] leading-relaxed text-ink/85">{company.about.body}</p>
       <dl class="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
         {company.about.points.map((p) => (
-          <div class="reveal border-t-2 border-navy pt-4">
+          <div class="reveal border-l-2 border-navy pl-4">
             <dt class="text-[13px] font-semibold text-navy uppercase">{p.title}</dt>
             <dd class="mt-1 text-[13.5px] leading-relaxed text-muted">{p.body}</dd>
           </div>
@@ -210,25 +212,25 @@ const year = new Date().getFullYear();
     <Section id="contact" label="Get in touch" heading="Contact the firm">
       <div class="reveal grid gap-10 lg:grid-cols-[1fr_1fr]">
         <dl class="divide-y divide-line border-y border-line text-[14px]">
-          <div class="py-3.5">
-            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase">Email</dt>
-            <dd class="mt-1">
+          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Email</dt>
+            <dd>
               <a href={`mailto:${company.email}`} class="text-navy underline-offset-2 hover:underline">{company.email}</a>
             </dd>
           </div>
           {company.phones.map((p, i) => (
-            <div class="py-3.5">
-              <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase">{i === 0 ? 'Telephone' : ''}</dt>
-              <dd class="mt-1"><a href={`tel:${p.tel}`} class="text-ink hover:text-navy">{p.display}</a></dd>
+            <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+              <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">{i === 0 ? 'Telephone' : ''}</dt>
+              <dd><a href={`tel:${p.tel}`} class="text-ink hover:text-navy">{p.display}</a></dd>
             </div>
           ))}
-          <div class="py-3.5">
-            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase">Office</dt>
-            <dd class="mt-1 text-muted">Kathmandu, Nepal</dd>
+          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Office</dt>
+            <dd class="text-muted">Kathmandu, Nepal</dd>
           </div>
-          <div class="py-3.5">
-            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase">Hours</dt>
-            <dd class="mt-1 text-muted">{company.hours}</dd>
+          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Hours</dt>
+            <dd class="text-muted">{company.hours}</dd>
           </div>
         </dl>
         <div class="border border-line bg-panel p-6">
@@ -247,14 +249,14 @@ const year = new Date().getFullYear();
   </main>
 
   <footer class="border-t border-line bg-navy-dark text-white/70">
-    <div class="mx-auto max-w-6xl px-6 py-12 text-center">
-      <div class="grid gap-8">
+    <div class="mx-auto max-w-6xl px-6 py-12">
+      <div class="grid gap-8 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <div class="flex items-center justify-center gap-3">
+          <div class="flex items-center gap-3">
             <span class="flex h-8 w-8 items-center justify-center bg-white/10 font-serif text-sm font-bold text-white">B</span>
             <span class="font-serif text-[16px] font-semibold text-white">{company.name}</span>
           </div>
-          <p class="mx-auto mt-3 max-w-md text-[13px] leading-relaxed">
+          <p class="mt-3 max-w-md text-[13px] leading-relaxed">
             Investment advisory for NEPSE equities, debentures, mutual funds and foreign direct
             investment into Nepal.
           </p>
@@ -270,7 +272,7 @@ const year = new Date().getFullYear();
           </ul>
         </div>
       </div>
-      <nav class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-2 border-t border-white/10 pt-6 text-[13px]" aria-label="Footer">
+      <nav class="mt-10 flex flex-wrap gap-x-8 gap-y-2 border-t border-white/10 pt-6 text-[13px]" aria-label="Footer">
         {company.nav.map((item) => (
           <a href={item.href} class="hover:text-white">{item.label}</a>
         ))}
@@ -279,7 +281,7 @@ const year = new Date().getFullYear();
     <div class="border-t border-white/10">
       <div class="mx-auto max-w-6xl px-6 py-6">
         <p class="max-w-4xl text-[11px] leading-relaxed">{company.disclaimer}</p>
-        <div class="mt-4 flex flex-col items-center gap-2 text-[12px] md:flex-row md:justify-between">
+        <div class="mt-4 flex items-center justify-between text-[12px]">
           <p>&copy; {year} {company.name}. All rights reserved.</p>
           <a href="#top" class="text-white/70 transition hover:text-white">&uarr; Back to top</a>
         </div>
