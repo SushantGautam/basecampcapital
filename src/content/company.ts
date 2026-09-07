@@ -1,0 +1,109 @@
+// Central place for all site copy so it's easy to edit without touching layouts.
+export const company = {
+  name: 'Base Camp Capital',
+  domain: 'thebasecampcapital.com',
+  tagline: "Your base camp for Nepal's capital market.",
+  email: 'basecampcapital@brpnepal.com',
+  phones: ['015705440', '9841155315'],
+  nav: [
+    { href: '#market', label: 'Capital Market' },
+    { href: '#share-market', label: 'Share Market' },
+    { href: '#opportunities', label: 'Opportunities' },
+    { href: '#fdi', label: 'FDI' },
+    { href: '#about', label: 'About' },
+    { href: '#contact', label: 'Contact' },
+  ],
+  hero: {
+    heading: "Your base camp for Nepal's capital market.",
+    sub: 'Research-backed guidance, portfolio structuring, and risk management for investors in NEPSE — and end-to-end support for foreign investment into Nepal.',
+  },
+  market: {
+    intro: [
+      "Nepal's capital market is the backbone of the country's long-term financing system, connecting businesses that need capital with individuals and institutions looking to invest. It is made up of the primary market — where companies raise fresh capital through IPOs, right shares, and debentures — and the secondary market, where those securities are subsequently bought and sold.",
+      'The market is regulated by the Securities Board of Nepal (SEBON), which oversees market conduct, licenses intermediaries, and protects investor interests, while the Nepal Stock Exchange (NEPSE) operates as the country\u2019s sole stock exchange for trading listed securities.',
+      "Since NEPSE's establishment in 1994, Nepal's capital market has expanded considerably. Today it lists well over 300 companies across sectors such as commercial banks, development banks, microfinance institutions, insurance, hydropower, hotels, manufacturing, and mutual funds. Total market capitalization has grown into the tens of trillions of rupees, reflecting rising participation from retail and institutional investors alike.",
+      'For Base Camp Capital, this evolving market represents fertile ground: a maturing regulatory framework, growing product diversity (mutual funds, debentures, and increasingly sophisticated instruments), and a large, increasingly financially literate investor base.',
+    ],
+    analysis: [
+      {
+        title: 'Two decades of structural growth',
+        body: "Nepal's capital market has been transformed over the past twenty years. In mid-March 2006, NEPSE listed 131 companies with a combined market capitalization of roughly NPR 130 billion. By mid-March 2026, that had grown to 286 listed companies and a total market capitalization of approximately NPR 4.74 trillion (474 kharba) — a more than 35-fold increase. As of mid-2026, the exchange typically lists 330–370 active scrips, with daily turnover ranging from roughly NPR 3–7 arba on quiet sessions to over NPR 20 arba during active rallies.",
+      },
+      {
+        title: 'Liquidity is macro-driven',
+        body: "NEPSE's turnover and index level move closely with banking-sector liquidity: remittance inflows, deposit growth, and Nepal Rastra Bank's monetary policy stance (interest rates, margin-lending rules, and CD ratio requirements) all directly affect how much money is available for share investment. Periods of falling interest rates and ample bank liquidity have historically coincided with sharp NEPSE rallies, while tightening cycles have coincided with prolonged corrections — a pattern investors should track alongside company fundamentals.",
+      },
+      {
+        title: 'Taxation has recently been clarified',
+        body: 'Capital gains tax (CGT) on listed shares is tiered by holding period: as of the FY 2083/84 budget, individual investors pay 10% CGT on shares held under one year (short-term) and 7.5% on shares held over one year (long-term), while institutional investors pay a flat 10%. Significantly, the government has now declared CGT on listed shares to be a final tax — once paid, no further income tax liability applies to that gain — which market participants and brokers have welcomed as a step toward long-term policy certainty.',
+      },
+      {
+        title: 'Outlook',
+        body: 'Government policy has been actively encouraging "real sector" companies (manufacturing, hydropower, agro-processing) to list, aiming to reduce the market\u2019s historical over-reliance on financial-sector stocks. Combined with the recent tax certainty and periodic monetary easing, this points toward a capital market that is gradually deepening and diversifying — though it remains a frontier market subject to meaningful swings tied to domestic liquidity cycles.',
+      },
+    ],
+    sectors: [
+      { name: 'Commercial Banks', cap: 'Largest single sector, historically over NPR 1,350 billion at 2021 peak', trend: 'High volatility; heavily shaped by NRB-mandated capital requirements' },
+      { name: 'Insurance (Life + Non-Life)', cap: '~NPR 636 billion', trend: 'Steady, defensive; second only to banks in consistency' },
+      { name: 'Microfinance', cap: '~NPR 384 billion (up from NPR 87 billion in 2018)', trend: 'Fastest-growing "BFI" sub-sector since gaining its own index' },
+      { name: 'Manufacturing & Processing', cap: '~NPR 339 billion (from NPR 6 billion in 2007)', trend: 'Benefiting from policy push to promote "real sector" listings' },
+      { name: 'Development Banks', cap: '~NPR 224 billion', trend: 'Steady but without explosive momentum' },
+      { name: 'Hotels & Tourism', cap: '~NPR 148 billion (from NPR 3 billion in 2007)', trend: 'Listed companies doubled from 4 to 8; tied to tourism recovery' },
+      { name: 'Trading', cap: '~NPR 209 billion', trend: 'Skewed by one-off events (e.g., a 2025 Supreme Court ruling allowing land-value capitalization into shares)' },
+      { name: 'Finance Companies', cap: 'Under NPR 100 billion', trend: 'Long-term declining weight in the overall market' },
+    ],
+    sectorNote: 'Figures are indicative, drawn from published market data as of mid-2026, and will shift with daily trading — always confirm current sector weightings before making allocation decisions.',
+    considerations: [
+      { title: 'Price bands (circuit breakers)', body: 'limit daily price movement, which curbs panic but can also suppress price discovery and temporarily trap sellers during sharp downturns.' },
+      { title: 'Retail dominance', body: 'means sentiment, dividend/bonus announcements, and rumor can move prices as much as fundamentals — reinforcing the case for research-driven investing.' },
+      { title: 'Concentration risk', body: 'persists: banking, insurance, and hydropower/microfinance together still account for the large majority of market capitalization, so cross-sector diversification within NEPSE itself is more limited than in larger markets.' },
+      { title: 'A growing debenture and mutual fund segment', body: 'offers lower-volatility alternatives to direct equity exposure for more conservative investors.' },
+    ],
+  },
+  shareMarket: {
+    intro: 'The share market is where most individual investors experience Nepal\u2019s capital market directly. Trading takes place electronically through NEPSE, with settlement, depository, and clearing handled by CDS and Clearing Limited (CDSC) and licensed stockbrokers.',
+    features: [
+      { title: 'Sectoral depth', body: 'Banking and financial institutions, hydropower, insurance, and microfinance together make up the bulk of listed companies, giving investors exposure to core sectors of the economy.' },
+      { title: 'Retail-driven participation', body: 'Millions of Nepalis hold demat accounts, and trading activity is heavily influenced by retail sentiment, dividend announcements, and macroeconomic news such as interest rate changes and liquidity conditions.' },
+      { title: 'Tools for investors', body: 'SIP and share calculators, technical indicators, floorsheet data, and sector indices are widely available, helping investors track performance and plan entries or exits.' },
+      { title: 'Volatility and cycles', body: 'Like most frontier and emerging markets, the NEPSE index can swing significantly based on liquidity, monetary policy, and investor sentiment, underscoring the importance of research-driven, long-term investing over speculation.' },
+    ],
+    closing: 'Base Camp Capital helps clients navigate this market with research-backed guidance, portfolio structuring, and risk management — rather than short-term speculation — so that share market participation contributes to genuine long-term wealth building.',
+  },
+  opportunities: {
+    intro: 'Nepal offers a diverse and growing range of investment avenues beyond the share market:',
+    items: [
+      { title: 'Hydropower', body: 'With significant untapped hydroelectric potential, hydropower remains one of the most actively promoted sectors, backed by government incentives and rising domestic and regional power demand.' },
+      { title: 'Banking & Financial Institutions', body: 'A well-regulated, consolidating banking sector offers exposure through equity, debentures, and mutual funds.' },
+      { title: 'Tourism & Hospitality', body: "Nepal's natural and cultural heritage continues to draw global visitors, supporting steady growth in hotels, resorts, and travel-related businesses." },
+      { title: 'Agriculture & Agro-processing', body: 'A large agrarian economy offers opportunities in modern farming, food processing, and export-oriented agribusiness.' },
+      { title: 'Information Technology & Digital Services', body: 'A fast-growing IT/BPO sector, supported by recent policy reforms that ease entry for tech-focused investment.' },
+      { title: 'Infrastructure & Real Estate', body: 'Urbanization and public infrastructure investment are creating opportunities in construction, real estate development, and related services.' },
+      { title: 'Mutual Funds & Fixed-Income Instruments', body: 'For investors seeking diversified or lower-risk exposure, professionally managed mutual funds and government/corporate debentures offer alternatives to direct equity investment.' },
+    ],
+    closing: 'Base Camp Capital works with individual and institutional clients to identify opportunities matched to their risk appetite, time horizon, and financial goals — from direct equity and debentures to sector-focused strategies.',
+  },
+  fdi: {
+    intro: 'Nepal has been steadily reforming its foreign investment regime to make the country more accessible to international investors. FDI is primarily governed by the Foreign Investment and Technology Transfer Act, 2019 (FITTA), alongside the Industrial Enterprises Act, Companies Act, and related regulations.',
+    highlights: [
+      { title: 'Reduced minimum threshold', body: 'The minimum FDI threshold was lowered from NPR 50 million to NPR 20 million per investor per project, broadening access for smaller and mid-sized foreign investors.' },
+      { title: 'Automatic Approval Route', body: 'The government has significantly expanded the number of sectors eligible for FDI approval through a faster, simplified automatic route, reducing reliance on lengthy manual approval processes.' },
+      { title: 'IT and digital sector incentives', body: 'The minimum investment threshold has been removed entirely for select IT and digital industry categories (such as software development, IT parks, data processing, and digital mapping), making Nepal notably more attractive for technology-focused foreign investors.' },
+      { title: 'Repatriation and banking access', body: 'FITTA allows companies with foreign investment to repatriate profits and dividends, and — subject to Nepal Rastra Bank approval — to borrow from foreign financial institutions.' },
+      { title: 'Sector-specific caps', body: 'Certain sectors retain foreign ownership limits (for example, telecommunications and consulting services), so due diligence on sector-specific rules remains essential before structuring an investment.' },
+      { title: 'One-window facilitation', body: 'The Department of Industry and the Investment Board Nepal (for larger projects) provide dedicated channels to guide foreign investors through proposal submission, approval, and registration.' },
+    ],
+    closing: 'For international investors and diaspora clients, Base Camp Capital provides end-to-end guidance — from regulatory navigation and sector selection to on-the-ground due diligence — to help FDI capital enter Nepal efficiently and compliantly.',
+  },
+  about: {
+    heading: 'Why Base Camp Capital',
+    body: 'Every expedition needs a base camp: a place of preparation, research, and sound judgment before you commit to the climb. Base Camp Capital is that ground for investors in Nepal — combining research-driven analysis of NEPSE with practical guidance on portfolios, debentures, mutual funds, and foreign investment. We focus on long-term wealth building over short-term speculation, and we back every recommendation with fundamentals, market structure, and risk management.',
+    points: [
+      'Research-backed guidance, not rumor-driven tips',
+      'Portfolio structuring and risk management for every appetite',
+      'End-to-end FDI navigation under FITTA and NRB rules',
+      'A long-term wealth-building mindset over speculation',
+    ],
+  },
+  disclaimer: 'This content is for general informational purposes only and does not constitute investment, legal, or tax advice. Regulations cited (including FITTA thresholds and NEPSE data) are subject to change; investors should verify current rules with SEBON, the Department of Industry, or a qualified advisor before making investment decisions. Base Camp Capital does not guarantee investment returns.',
+};
