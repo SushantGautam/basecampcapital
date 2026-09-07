@@ -6,6 +6,46 @@ import Motion from '../components/Motion.astro';
 import { company } from '../content/company';
 
 const year = new Date().getFullYear();
+const site = Astro.site;
+const jsonLd = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'FinancialService',
+          '@id': `${site}#organization`,
+          name: company.name,
+          description: 'Investment advisory in Kathmandu for NEPSE equities, debentures, mutual funds and foreign direct investment into Nepal.',
+          url: String(site),
+          logo: new URL('/og-image.png', site).href,
+          image: new URL('/og-image.png', site).href,
+          email: company.email,
+          telephone: company.phones.map((p) => p.tel),
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Kathmandu',
+            addressCountry: 'NP',
+          },
+          openingHoursSpecification: [
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              opens: '09:00',
+              closes: '17:00',
+            },
+          ],
+          areaServed: { '@type': 'Country', name: 'Nepal' },
+          priceRange: '$$',
+        },
+        {
+          '@type': 'WebSite',
+          '@id': `${site}#website`,
+          url: String(site),
+          name: company.name,
+          publisher: { '@id': `${site}#organization` },
+          inLanguage: 'en',
+        },
+      ],
+    });
 ---
 
 <Layout>
@@ -288,4 +328,6 @@ const year = new Date().getFullYear();
       </div>
     </div>
   </footer>
+
+  <script type="application/ld+json" is:inline set:html={jsonLd} />
 </Layout>
