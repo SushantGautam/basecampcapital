@@ -146,7 +146,7 @@ const year = new Date().getFullYear();
 
     <!-- Share Market -->
     <Section id="share-market" label="For investors" heading="The Share Market">
-      <p class="max-w-2xl text-[15px] leading-relaxed text-ink/85">{company.shareMarket.intro}</p>
+      <p class="text-[15px] leading-relaxed text-ink/85">{company.shareMarket.intro}</p>
       <dl class="mt-8 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2">
         {company.shareMarket.features.map((f) => (
           <div class="bg-white p-5">
@@ -155,14 +155,14 @@ const year = new Date().getFullYear();
           </div>
         ))}
       </dl>
-      <p class="mt-8 max-w-2xl border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
+      <p class="mt-8 border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
         {company.shareMarket.closing}
       </p>
     </Section>
 
     <!-- Opportunities -->
     <Section id="opportunities" label="Beyond the exchange" heading="Investment Opportunities in Nepal" alt>
-      <p class="max-w-2xl text-[15px] leading-relaxed text-ink/85">{company.opportunities.intro}</p>
+      <p class="text-[15px] leading-relaxed text-ink/85">{company.opportunities.intro}</p>
       <dl class="mt-8 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
         {company.opportunities.items.map((o) => (
           <div class="bg-white p-5">
@@ -171,14 +171,14 @@ const year = new Date().getFullYear();
           </div>
         ))}
       </dl>
-      <p class="mt-8 max-w-2xl border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
+      <p class="mt-8 border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
         {company.opportunities.closing}
       </p>
     </Section>
 
     <!-- FDI -->
     <Section id="fdi" label="For international capital" heading="Foreign Direct Investment in Nepal">
-      <p class="max-w-2xl text-[15px] leading-relaxed text-ink/85">{company.fdi.intro}</p>
+      <p class="text-[15px] leading-relaxed text-ink/85">{company.fdi.intro}</p>
       <ol class="mt-8 grid gap-x-10 md:grid-cols-2">
         {company.fdi.highlights.map((h, i) => (
           <li class="grid grid-cols-[28px_1fr] gap-2 border-t border-line py-3.5">
@@ -190,7 +190,7 @@ const year = new Date().getFullYear();
           </li>
         ))}
       </ol>
-      <p class="mt-8 max-w-2xl border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
+      <p class="mt-8 border-l-2 border-navy pl-5 text-[15px] leading-relaxed text-ink">
         {company.fdi.closing}
       </p>
     </Section>
