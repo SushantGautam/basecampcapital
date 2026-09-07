@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #1c1c1a;
-  --color-paper: #f6f4ee;
-  --color-line: #d8d4c8;
-  --color-forest: #1f4438;
-  --color-forest-dark: #16322a;
-  --color-muted: #5c5a52;
+  --color-paper: #ffffff;
+  --color-panel: #f4f6f8;
+  --color-ink: #1a222e;
+  --color-muted: #5a6472;
+  --color-line: #dfe3e8;
+  --color-navy: #1b3a5c;
+  --color-navy-dark: #142c46;
   --font-serif: "Source Serif 4", Georgia, serif;
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
 }
@@ -16,5 +17,5 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 4.5rem;
+  scroll-margin-top: 6.5rem;
 }

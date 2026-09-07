@@ -1,20 +1,18 @@
 ---
 interface Props {
   id: string;
-  num: string;
+  label: string;
   heading: string;
+  alt?: boolean;
 }
 
-const { id, num, heading } = Astro.props;
+const { id, label, heading, alt = false } = Astro.props;
 ---
 
-<section id={id} class="border-t border-line">
-  <div class="mx-auto max-w-4xl px-6 py-16 md:py-20">
-    <div class="flex items-baseline gap-4">
-      <span class="font-serif text-sm text-muted tabular-nums">{num}</span>
-      <h2 class="font-serif text-2xl md:text-3xl font-semibold tracking-tight text-ink">{heading}</h2>
-    </div>
-    <div class="mt-2 border-b border-line"></div>
+<section id={id} class={alt ? 'border-t border-line bg-panel' : 'border-t border-line bg-white'}>
+  <div class="mx-auto max-w-6xl px-6 py-14 md:py-16">
+    <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">{label}</p>
+    <h2 class="mt-1.5 font-serif text-[26px] md:text-[30px] font-semibold tracking-tight text-ink">{heading}</h2>
     <div class="mt-8">
       <slot />
     </div>

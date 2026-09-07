@@ -9,7 +9,8 @@ export const company = {
     { display: '+977 9841155315', tel: '+9779841155315' },
   ],
   nav: [
-    { href: '#market', label: 'Capital Market' },
+    { href: '#services', label: 'Services' },
+    { href: '#market', label: 'Market Brief' },
     { href: '#share-market', label: 'Share Market' },
     { href: '#opportunities', label: 'Opportunities' },
     { href: '#fdi', label: 'FDI' },
@@ -108,5 +109,25 @@ export const company = {
       { title: 'Risk management', body: 'Position sizing, diversification limits and liquidity planning suited to a frontier market.' },
     ],
   },
+  hours: 'Sunday – Friday, 9:00 – 17:00 NPT',
+  services: [
+    { title: 'Equity Advisory', body: 'Research-led guidance on NEPSE-listed equities. We screen for fundamentals, liquidity and entry timing before recommending a position, and review holdings as market conditions change.' },
+    { title: 'Portfolio & Risk Management', body: 'Portfolio construction sized to your capital, time horizon and drawdown tolerance, with sector exposure limits suited to NEPSE\'s concentration.' },
+    { title: 'Fixed Income & Funds', body: 'Access and selection support for corporate debentures, mutual funds and government securities, for investors prioritising steady income over price volatility.' },
+    { title: 'FDI Advisory', body: 'End-to-end support for foreign and diaspora investors: sector screening against FITTA limits, threshold and approval routing, documentation and repatriation compliance.' },
+  ],
+  stats: [
+    { value: '1994', label: 'NEPSE operational since' },
+    { value: '286', label: 'Listed companies (Mar 2026)' },
+    { value: 'NPR 4.74T', label: 'Total market capitalisation' },
+    { value: '35×', label: 'Market cap growth in 20 years' },
+  ],
+  snapshot: [
+    { label: 'Listed companies', value: '286' },
+    { label: 'Market capitalisation', value: 'NPR 4.74 trillion' },
+    { label: 'Active scrips', value: '330–370' },
+    { label: 'Daily turnover', value: 'NPR 3–20 arba' },
+    { label: 'CGT, individuals > 1 yr', value: '7.5% (final tax)' },
+  ],
   disclaimer: 'This content is for general informational purposes only and does not constitute investment, legal, or tax advice. Regulations cited (including FITTA thresholds and NEPSE data) are subject to change; investors should verify current rules with SEBON, the Department of Industry, or a qualified advisor before making investment decisions. Base Camp Capital does not guarantee investment returns.',
 };
