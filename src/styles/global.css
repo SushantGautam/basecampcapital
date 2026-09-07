@@ -19,3 +19,51 @@ html {
 section[id] {
   scroll-margin-top: 6.5rem;
 }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Reading progress bar under the sticky header */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #1b3a5c;
+  z-index: 60;
+}
+
+/* Animated underline for primary nav */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 1.5px;
+  background: #1b3a5c;
+  transition: right 0.25s ease;
+}
+.nav-link:hover::after {
+  right: 0;
+}

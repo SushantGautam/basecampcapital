@@ -34,6 +34,17 @@ const { title = `${company.name} — ${company.tagline}`, description = company.
     />
   </head>
   <body class="bg-paper font-sans text-ink antialiased">
+    <div id="progress" aria-hidden="true"></div>
+    <script>
+      const bar = document.getElementById('progress');
+      const onScroll = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        bar.style.width = max > 0 ? `${(h.scrollTop / max) * 100}%` : '0';
+      };
+      addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    </script>
     <slot />
   </body>
 </html>

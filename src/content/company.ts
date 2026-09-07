@@ -11,6 +11,7 @@ export const company = {
   nav: [
     { href: '#services', label: 'Services' },
     { href: '#market', label: 'Market Brief' },
+    { href: '#process', label: 'Process' },
     { href: '#share-market', label: 'Share Market' },
     { href: '#opportunities', label: 'Opportunities' },
     { href: '#fdi', label: 'FDI' },
@@ -115,6 +116,13 @@ export const company = {
     { title: 'Portfolio & Risk Management', body: 'Portfolio construction sized to your capital, time horizon and drawdown tolerance, with sector exposure limits suited to NEPSE\'s concentration.' },
     { title: 'Fixed Income & Funds', body: 'Access and selection support for corporate debentures, mutual funds and government securities, for investors prioritising steady income over price volatility.' },
     { title: 'FDI Advisory', body: 'End-to-end support for foreign and diaspora investors: sector screening against FITTA limits, threshold and approval routing, documentation and repatriation compliance.' },
+  ],
+  process: [
+    { title: 'First conversation', body: 'You write or call with your objectives, capital range and time horizon. We assess whether we are the right firm for the mandate and say so plainly if we are not.' },
+    { title: 'Written proposal', body: 'A short engagement note setting out the scope, the sectors and instruments in play, fee terms and what reporting you can expect.' },
+    { title: 'Research and construction', body: 'We screen the universe against fundamentals, liquidity and regulation, then structure the portfolio with explicit position and sector limits.' },
+    { title: 'Execution support', body: 'Coordination with your broker and CDS account for trades, IPO applications and debenture subscriptions, with documentation handled end to end.' },
+    { title: 'Ongoing review', body: 'Scheduled reviews as monetary policy, liquidity and company results move, with written notes on any change to position or thesis.' },
   ],
   stats: [
     { value: '1994', label: 'NEPSE operational since' },

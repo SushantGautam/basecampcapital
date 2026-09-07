@@ -11,8 +11,10 @@ const { id, label, heading, alt = false } = Astro.props;
 
 <section id={id} class={alt ? 'border-t border-line bg-panel' : 'border-t border-line bg-white'}>
   <div class="mx-auto max-w-6xl px-6 py-14 md:py-16">
-    <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">{label}</p>
-    <h2 class="mt-1.5 font-serif text-[26px] md:text-[30px] font-semibold tracking-tight text-ink">{heading}</h2>
+    <div class="reveal">
+      <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">{label}</p>
+      <h2 class="mt-1.5 font-serif text-[28px] md:text-[34px] font-semibold tracking-tight text-ink">{heading}</h2>
+    </div>
     <div class="mt-8">
       <slot />
     </div>

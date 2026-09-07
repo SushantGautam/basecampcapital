@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Section from '../components/Section.astro';
+import Motion from '../components/Motion.astro';
 import { company } from '../content/company';
 
 const year = new Date().getFullYear();
@@ -11,17 +12,18 @@ const year = new Date().getFullYear();
   <Header />
 
   <main id="top">
+  <Motion />
     <!-- Hero: statement + live market snapshot -->
     <section class="border-b border-line bg-white">
-      <div class="mx-auto grid max-w-6xl gap-10 px-6 py-14 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+      <div class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:py-20 lg:grid-cols-[1.4fr_1fr] lg:items-center">
         <div>
           <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">
             Investment advisory · Kathmandu · Est. in Nepal
           </p>
-          <h1 class="mt-3 max-w-xl font-serif text-[34px] leading-[1.15] font-semibold tracking-tight text-ink md:text-[44px]">
+          <h1 class="mt-3 max-w-xl font-serif text-[38px] leading-[1.12] font-semibold tracking-tight text-ink md:text-[52px]">
             {company.hero.heading}
           </h1>
-          <p class="mt-4 max-w-lg text-[16px] leading-relaxed text-muted">{company.hero.sub}</p>
+          <p class="mt-5 max-w-lg text-[17px] leading-relaxed text-muted">{company.hero.sub}</p>
           <div class="mt-7 flex flex-wrap gap-4">
             <a href="#contact" class="bg-navy px-6 py-3 text-sm font-medium text-white transition hover:bg-navy-dark">
               Speak with an advisor
@@ -31,7 +33,7 @@ const year = new Date().getFullYear();
             </a>
           </div>
         </div>
-        <aside class="border border-line bg-panel">
+        <aside class="reveal border border-line bg-panel">
           <div class="flex items-center justify-between border-b border-line px-5 py-3">
             <span class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">NEPSE at a glance</span>
             <span class="text-[11px] text-muted">mid-2026</span>
@@ -52,7 +54,7 @@ const year = new Date().getFullYear();
     </section>
 
     <!-- Stats band -->
-    <section class="border-b border-line bg-navy text-white">
+    <section class="reveal border-b border-line bg-navy text-white">
       <div class="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-white/15 px-6 md:grid-cols-4">
         {company.stats.map((s) => (
           <div class="px-4 py-6 text-center first:pl-0">
@@ -65,9 +67,9 @@ const year = new Date().getFullYear();
 
     <!-- Services -->
     <Section id="services" label="What we do" heading="Advisory Services">
-      <div class="grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2">
+      <div class="reveal grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2">
         {company.services.map((s, i) => (
-          <div class="bg-white p-6">
+          <div class="bg-white p-6 transition-colors hover:bg-panel">
             <p class="font-serif text-[13px] text-muted tabular-nums">0{i + 1}</p>
             <h3 class="mt-1 font-serif text-lg font-semibold text-ink">{s.title}</h3>
             <p class="mt-2 text-[14px] leading-relaxed text-muted">{s.body}</p>
@@ -76,13 +78,28 @@ const year = new Date().getFullYear();
       </div>
     </Section>
 
+    <!-- Process -->
+    <Section id="process" label="How we work" heading="From enquiry to ongoing review">
+      <ol class="reveal relative ml-3 max-w-2xl border-l border-line pl-8">
+        {company.process.map((step, i) => (
+          <li class="relative pb-8 last:pb-0">
+            <span class="absolute -left-[41px] flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-white font-serif text-[11px] font-semibold text-navy tabular-nums">
+              {i + 1}
+            </span>
+            <h3 class="font-serif text-[16px] font-semibold text-ink">{step.title}</h3>
+            <p class="mt-1 text-[14px] leading-relaxed text-muted">{step.body}</p>
+          </li>
+        ))}
+      </ol>
+    </Section>
+
     <!-- Capital Market -->
     <Section id="market" label="Market brief" heading="Nepal's Capital Market" alt>
       <div class="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
-        <div class="space-y-4 text-[15px] leading-relaxed text-ink/85">
+        <div class="reveal space-y-4 text-[15px] leading-relaxed text-ink/85">
           {company.market.intro.map((p) => <p>{p}</p>)}
         </div>
-        <div class="space-y-5">
+        <div class="reveal space-y-5">
           {company.market.analysis.map((a) => (
             <div class="border-l-2 border-navy pl-4">
               <h4 class="text-[13px] font-semibold text-navy uppercase">{a.title}</h4>
@@ -104,7 +121,7 @@ const year = new Date().getFullYear();
           </thead>
           <tbody class="divide-y divide-line">
             {company.market.sectors.map((s) => (
-              <tr class="align-top">
+              <tr class="align-top transition-colors hover:bg-panel">
                 <td class="px-4 py-3 font-medium text-ink">{s.name}</td>
                 <td class="px-4 py-3 text-muted tabular-nums">{s.cap}</td>
                 <td class="px-4 py-3 text-muted">{s.trend}</td>
@@ -178,7 +195,7 @@ const year = new Date().getFullYear();
 
     <!-- About -->
     <Section id="about" label="Who we are" heading={company.about.heading} alt>
-      <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
+      <div class="reveal grid gap-10 lg:grid-cols-[1.2fr_1fr]">
         <p class="text-[15px] leading-relaxed text-ink/85">{company.about.body}</p>
         <dl class="divide-y divide-line border-y border-line">
           {company.about.points.map((p) => (
@@ -193,7 +210,7 @@ const year = new Date().getFullYear();
 
     <!-- Contact -->
     <Section id="contact" label="Get in touch" heading="Contact the firm">
-      <div class="grid gap-10 lg:grid-cols-[1fr_1fr]">
+      <div class="reveal grid gap-10 lg:grid-cols-[1fr_1fr]">
         <dl class="divide-y divide-line border-y border-line text-[14px]">
           <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
             <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Email</dt>
@@ -265,7 +282,10 @@ const year = new Date().getFullYear();
     <div class="border-t border-white/10">
       <div class="mx-auto max-w-6xl px-6 py-6">
         <p class="max-w-4xl text-[11px] leading-relaxed">{company.disclaimer}</p>
-        <p class="mt-4 text-[12px]">&copy; {year} {company.name}. All rights reserved.</p>
+        <div class="mt-4 flex items-center justify-between text-[12px]">
+          <p>&copy; {year} {company.name}. All rights reserved.</p>
+          <a href="#top" class="text-white/70 transition hover:text-white">&uarr; Back to top</a>
+        </div>
       </div>
     </div>
   </footer>
