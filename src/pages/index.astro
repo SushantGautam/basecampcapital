@@ -197,17 +197,15 @@ const year = new Date().getFullYear();
 
     <!-- About -->
     <Section id="about" label="Who we are" heading={company.about.heading} alt>
-      <div class="reveal grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-        <p class="text-[15px] leading-relaxed text-ink/85">{company.about.body}</p>
-        <dl class="divide-y divide-line border-y border-line">
-          {company.about.points.map((p) => (
-            <div class="py-3">
-              <dt class="text-[13px] font-semibold text-navy uppercase">{p.title}</dt>
-              <dd class="mt-0.5 text-[13.5px] leading-relaxed text-muted">{p.body}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
+      <p class="reveal text-[15px] leading-relaxed text-ink/85">{company.about.body}</p>
+      <dl class="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
+        {company.about.points.map((p) => (
+          <div class="reveal border-l-2 border-navy pl-4">
+            <dt class="text-[13px] font-semibold text-navy uppercase">{p.title}</dt>
+            <dd class="mt-1 text-[13.5px] leading-relaxed text-muted">{p.body}</dd>
+          </div>
+        ))}
+      </dl>
     </Section>
 
     <!-- Contact -->
