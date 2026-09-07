@@ -84,9 +84,9 @@ const year = new Date().getFullYear();
         {company.process.map((step, i) => (
           <li class="relative pl-10 md:pt-11 md:pl-0">
             {i < company.process.length - 1 && (
-              <span class="absolute top-7 bottom-2 left-[11px] w-px bg-line md:top-3 md:bottom-auto md:left-9 md:right-[-12px] md:h-px md:w-auto" aria-hidden="true"></span>
+              <span class="absolute top-7 bottom-2 left-[11px] w-px bg-line md:top-3 md:bottom-auto md:left-[calc(50%+14px)] md:right-[calc(-50%-14px)] md:h-px md:w-auto" aria-hidden="true"></span>
             )}
-            <span class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-white font-serif text-[11px] font-semibold text-navy tabular-nums md:top-0">
+            <span class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-white font-serif text-[11px] font-semibold text-navy tabular-nums md:left-1/2 md:-translate-x-1/2">
               {i + 1}
             </span>
             <h3 class="font-serif text-[16px] font-semibold text-ink">{step.title}</h3>
