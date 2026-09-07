@@ -2,9 +2,12 @@
 export const company = {
   name: 'Base Camp Capital',
   domain: 'thebasecampcapital.com',
-  tagline: "Your base camp for Nepal's capital market.",
+  tagline: "Investment advisory, Kathmandu.",
   email: 'basecampcapital@brpnepal.com',
-  phones: ['015705440', '9841155315'],
+  phones: [
+    { display: '+977 1 5705440', tel: '+97715705440' },
+    { display: '+977 9841155315', tel: '+9779841155315' },
+  ],
   nav: [
     { href: '#market', label: 'Capital Market' },
     { href: '#share-market', label: 'Share Market' },
@@ -15,7 +18,7 @@ export const company = {
   ],
   hero: {
     heading: "Your base camp for Nepal's capital market.",
-    sub: 'Research-backed guidance, portfolio structuring, and risk management for investors in NEPSE — and end-to-end support for foreign investment into Nepal.',
+    sub: 'Advising individual and institutional investors on NEPSE equities, debentures and mutual funds, and guiding foreign investors through Nepal\'s FDI framework.',
   },
   market: {
     intro: [
@@ -96,13 +99,13 @@ export const company = {
     closing: 'For international investors and diaspora clients, Base Camp Capital provides end-to-end guidance — from regulatory navigation and sector selection to on-the-ground due diligence — to help FDI capital enter Nepal efficiently and compliantly.',
   },
   about: {
-    heading: 'Why Base Camp Capital',
-    body: 'Every expedition needs a base camp: a place of preparation, research, and sound judgment before you commit to the climb. Base Camp Capital is that ground for investors in Nepal — combining research-driven analysis of NEPSE with practical guidance on portfolios, debentures, mutual funds, and foreign investment. We focus on long-term wealth building over short-term speculation, and we back every recommendation with fundamentals, market structure, and risk management.',
+    heading: 'About the firm',
+    body: 'Base Camp Capital is a Kathmandu-based investment advisory. We work with individual and institutional clients on NEPSE equities, debentures and mutual funds, and assist foreign investors with entry under the FITTA regime. Our approach is research-led: we assess company fundamentals, market liquidity and the regulatory environment before recommending a position, and we structure every portfolio around the client\'s time horizon and risk tolerance.',
     points: [
-      'Research-backed guidance, not rumor-driven tips',
-      'Portfolio structuring and risk management for every appetite',
-      'End-to-end FDI navigation under FITTA and NRB rules',
-      'A long-term wealth-building mindset over speculation',
+      { title: 'Equity advisory', body: 'Research-led guidance on NEPSE-listed equities, with portfolio structuring and ongoing review.' },
+      { title: 'Fixed income', body: 'Allocation to debentures, mutual funds and government securities for lower-volatility exposure.' },
+      { title: 'FDI facilitation', body: 'Sector selection, approval routing and compliance support for foreign and diaspora investors.' },
+      { title: 'Risk management', body: 'Position sizing, diversification limits and liquidity planning suited to a frontier market.' },
     ],
   },
   disclaimer: 'This content is for general informational purposes only and does not constitute investment, legal, or tax advice. Regulations cited (including FITTA thresholds and NEPSE data) are subject to change; investors should verify current rules with SEBON, the Department of Industry, or a qualified advisor before making investment decisions. Base Camp Capital does not guarantee investment returns.',
