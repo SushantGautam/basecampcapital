@@ -12,6 +12,18 @@
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root.dark {
+  --color-paper: #0f1723;
+  --color-panel: #18242f;
+  --color-ink: #e6ebf1;
+  --color-muted: #9aa8b8;
+  --color-line: #273648;
+  --color-navy: #3e6f9f;
+  --color-navy-dark: #142c46;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,7 +57,7 @@ section[id] {
   left: 0;
   height: 2px;
   width: 0;
-  background: #1b3a5c;
+  background: var(--color-navy);
   z-index: 60;
 }
 
@@ -61,7 +73,7 @@ section[id] {
   right: 100%;
   bottom: -4px;
   height: 1.5px;
-  background: #1b3a5c;
+  background: var(--color-navy);
   transition: right 0.25s ease;
 }
 .nav-link:hover::after {

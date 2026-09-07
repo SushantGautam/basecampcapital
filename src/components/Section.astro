@@ -9,7 +9,7 @@ interface Props {
 const { id, label, heading, alt = false } = Astro.props;
 ---
 
-<section id={id} class={alt ? 'border-t border-line bg-panel' : 'border-t border-line bg-white'}>
+<section id={id} class={alt ? 'border-t border-line bg-panel' : 'border-t border-line bg-paper'}>
   <div class="mx-auto max-w-6xl px-6 py-14 md:py-16">
     <div class="reveal">
       <p class="text-[11px] font-semibold tracking-[0.18em] text-navy uppercase">{label}</p>

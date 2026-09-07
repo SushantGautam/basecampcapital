@@ -18,6 +18,20 @@ const { title = `${company.name} — ${company.tagline}`, description = company.
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#1b3a5c" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f1723" />
+    <script is:inline>
+      (() => {
+        const apply = () => {
+          const stored = localStorage.getItem('theme');
+          const dark = stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.classList.toggle('dark', dark);
+        };
+        apply();
+        matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+          if (!localStorage.getItem('theme')) apply();
+        });
+      })();
+    </script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
