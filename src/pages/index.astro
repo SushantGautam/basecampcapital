@@ -80,14 +80,17 @@ const year = new Date().getFullYear();
 
     <!-- Process -->
     <Section id="process" label="How we work" heading="From enquiry to ongoing review">
-      <ol class="reveal relative ml-3 max-w-2xl border-l border-line pl-8">
+      <ol class="reveal grid gap-8 md:grid-cols-5 md:gap-6">
         {company.process.map((step, i) => (
-          <li class="relative pb-8 last:pb-0">
-            <span class="absolute -left-[41px] flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-white font-serif text-[11px] font-semibold text-navy tabular-nums">
+          <li class="relative pl-10 md:pt-11 md:pl-0">
+            {i < company.process.length - 1 && (
+              <span class="absolute top-7 bottom-2 left-[11px] w-px bg-line md:top-3 md:bottom-auto md:left-9 md:right-[-12px] md:h-px md:w-auto" aria-hidden="true"></span>
+            )}
+            <span class="absolute top-0 left-0 flex h-6 w-6 items-center justify-center rounded-full border border-navy bg-white font-serif text-[11px] font-semibold text-navy tabular-nums md:top-0">
               {i + 1}
             </span>
             <h3 class="font-serif text-[16px] font-semibold text-ink">{step.title}</h3>
-            <p class="mt-1 text-[14px] leading-relaxed text-muted">{step.body}</p>
+            <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted">{step.body}</p>
           </li>
         ))}
       </ol>
@@ -176,9 +179,9 @@ const year = new Date().getFullYear();
     <!-- FDI -->
     <Section id="fdi" label="For international capital" heading="Foreign Direct Investment in Nepal">
       <p class="max-w-2xl text-[15px] leading-relaxed text-ink/85">{company.fdi.intro}</p>
-      <ol class="mt-8 max-w-3xl">
+      <ol class="mt-8 grid gap-x-10 md:grid-cols-2">
         {company.fdi.highlights.map((h, i) => (
-          <li class="grid grid-cols-[28px_1fr] gap-2 border-t border-line py-3.5 last:border-b">
+          <li class="grid grid-cols-[28px_1fr] gap-2 border-t border-line py-3.5">
             <span class="font-serif text-[13px] text-muted tabular-nums">{String(i + 1).padStart(2, '0')}</span>
             <div>
               <p class="text-[14px] font-semibold text-ink">{h.title}</p>
