@@ -2,7 +2,11 @@
 // github.io/basecampcapital/ (subpath) and thebasecampcapital.com (root).
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const file = 'dist/index.html';
-let html = readFileSync(file, 'utf8');
-html = html.replaceAll('href="/_astro/', 'href="./_astro/').replaceAll('href="/favicon.svg"', 'href="./favicon.svg"');
-writeFileSync(file, html);
+for (const file of ['dist/index.html', 'dist/404.html']) {
+  let html = readFileSync(file, 'utf8');
+  html = html
+    .replaceAll('href="/_astro/', 'href="./_astro/')
+    .replaceAll('href="/favicon.svg"', 'href="./favicon.svg"')
+    .replaceAll('href="/favicon.png"', 'href="./favicon.png"');
+  writeFileSync(file, html);
+}

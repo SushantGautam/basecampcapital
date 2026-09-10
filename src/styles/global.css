@@ -32,18 +32,19 @@ section[id] {
   scroll-margin-top: 6.5rem;
 }
 
-/* Scroll reveal */
-.reveal {
+/* Scroll reveal — only hidden when JS is available (see Layout head script),
+   so crawlers and no-JS visitors always see full content. */
+:root.js .reveal {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.reveal.in-view {
+:root.js .reveal.in-view {
   opacity: 1;
   transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  :root.js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
