@@ -21,7 +21,7 @@ const paths: Record<string, string> = {
 };
 ---
 
-<div class="flex items-center gap-4">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
   {company.socials.map((s) => (
     <a href={s.href} target="_blank" rel="me noopener noreferrer" aria-label={`${company.name} on ${s.name}`}
        class={`inline-flex items-center gap-1.5 transition ${labeled ? 'text-[13px]' : ''} ${className}`}>

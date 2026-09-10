@@ -252,34 +252,34 @@ const jsonLd = JSON.stringify({
 
     <!-- Contact -->
     <Section id="contact" label="Get in touch" heading="Contact the firm">
-      <div class="reveal grid gap-10 lg:grid-cols-[1fr_1fr]">
-        <dl class="divide-y divide-line border-y border-line text-[14px]">
-          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+      <div class="reveal grid gap-10 min-w-0 lg:grid-cols-[1fr_1fr]">
+        <dl class="min-w-0 divide-y divide-line border-y border-line text-[14px]">
+          <div class="grid grid-cols-[100px_1fr] gap-2 py-3.5 sm:grid-cols-[120px_1fr]">
             <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Email</dt>
-            <dd>
+            <dd class="min-w-0 break-words">
               <a href={`mailto:${company.email}`} class="text-navy underline-offset-2 hover:underline">{company.email}</a>
             </dd>
           </div>
           {company.phones.map((p, i) => (
-            <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+            <div class="grid grid-cols-[100px_1fr] gap-2 py-3.5 sm:grid-cols-[120px_1fr]">
               <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">{i === 0 ? 'Telephone' : ''}</dt>
               <dd><a href={`tel:${p.tel}`} class="text-ink hover:text-navy">{p.display}</a></dd>
             </div>
           ))}
-          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+          <div class="grid grid-cols-[100px_1fr] gap-2 py-3.5 sm:grid-cols-[120px_1fr]">
             <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Office</dt>
             <dd class="text-muted">Kathmandu, Nepal</dd>
           </div>
-          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+          <div class="grid grid-cols-[100px_1fr] gap-2 py-3.5 sm:grid-cols-[120px_1fr]">
             <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Hours</dt>
             <dd class="text-muted">{company.hours}</dd>
           </div>
-          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+          <div class="grid grid-cols-[100px_1fr] gap-2 py-3.5 sm:grid-cols-[120px_1fr]">
             <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Follow</dt>
             <dd><SocialIcons labeled className="text-ink/70 hover:text-navy" /></dd>
           </div>
         </dl>
-        <div class="border border-line bg-panel p-6">
+        <div class="min-w-0 border border-line bg-panel p-6">
           <h3 class="font-serif text-lg font-semibold text-ink">Making an enquiry</h3>
           <p class="mt-2 text-[14px] leading-relaxed text-muted">
             Write to us with a short note on your objectives, capital range and time horizon.
