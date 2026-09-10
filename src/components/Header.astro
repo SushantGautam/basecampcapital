@@ -1,6 +1,7 @@
 ---
 import { company } from '../content/company';
 import ThemeToggle from './ThemeToggle.astro';
+import SocialIcons from './SocialIcons.astro';
 ---
 
 <div class="bg-navy-dark text-white/85">
@@ -11,6 +12,8 @@ import ThemeToggle from './ThemeToggle.astro';
         <a href={`tel:${p.tel}`} class="hover:text-white">{p.display}</a>
       ))}
       <a href={`mailto:${company.email}`} class="hidden hover:text-white sm:inline">{company.email}</a>
+      <span class="hidden h-3.5 w-px bg-white/25 sm:block" aria-hidden="true"></span>
+      <SocialIcons className="text-white/70 hover:text-white" />
     </div>
   </div>
 </div>

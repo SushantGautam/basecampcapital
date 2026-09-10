@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Section from '../components/Section.astro';
 import Motion from '../components/Motion.astro';
+import SocialIcons from '../components/SocialIcons.astro';
 import { company } from '../content/company';
 
 const year = new Date().getFullYear();
@@ -35,6 +36,7 @@ const jsonLd = JSON.stringify({
           ],
           areaServed: { '@type': 'Country', name: 'Nepal' },
           priceRange: '$$',
+          sameAs: company.socials.map((s) => s.href),
         },
         {
           '@type': 'WebSite',
@@ -272,6 +274,10 @@ const jsonLd = JSON.stringify({
             <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Hours</dt>
             <dd class="text-muted">{company.hours}</dd>
           </div>
+          <div class="grid grid-cols-[120px_1fr] gap-2 py-3.5">
+            <dt class="text-[11px] font-semibold tracking-[0.14em] text-navy uppercase pt-0.5">Follow</dt>
+            <dd><SocialIcons labeled className="text-ink/70 hover:text-navy" /></dd>
+          </div>
         </dl>
         <div class="border border-line bg-panel p-6">
           <h3 class="font-serif text-lg font-semibold text-ink">Making an enquiry</h3>
@@ -310,6 +316,10 @@ const jsonLd = JSON.stringify({
             ))}
             <li>{company.hours}</li>
           </ul>
+          <p class="mt-5 text-[11px] font-semibold tracking-[0.18em] text-white uppercase">Follow</p>
+          <div class="mt-2">
+            <SocialIcons className="text-white/70 hover:text-white" />
+          </div>
         </div>
       </div>
       <nav class="mt-10 flex flex-wrap gap-x-8 gap-y-2 border-t border-white/10 pt-6 text-[13px]" aria-label="Footer">

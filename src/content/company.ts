@@ -8,6 +8,11 @@ export const company = {
     { display: '+977 1 5705440', tel: '+97715705440' },
     { display: '+977 9841155315', tel: '+9779841155315' },
   ],
+  socials: [
+    { name: 'Instagram', href: 'https://www.instagram.com/basecampcapital' },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61593882586296' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/basecamp-capital-nepal/about/' },
+  ],
   nav: [
     { href: '#services', label: 'Services' },
     { href: '#market', label: 'Market Brief' },
